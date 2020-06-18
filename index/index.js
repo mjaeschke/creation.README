@@ -73,8 +73,5 @@ inqP.then(function(info){
     }).catch(function(err){
         console.log("error");
         console.log(err);
-    }).catch(function(err){
-        console.log("error");
-        console.log(err);
     })
 });

@@ -2,7 +2,7 @@
     
     project title 
 
-read me generator 
+read me generator
 
     table of contents 
 
@@ -14,11 +14,11 @@ read me generator
 
     project description 
 
-a read me generator 
+a read me generator
 
     project contributors 
 
-nan 
+michael jeff john 
 
     git hub user name 
 
@@ -26,8 +26,8 @@ mjaeschke
 
     group emails 
 
-jaeschke21@gmail
+jaeschke21@gmail.com
 
     questions for the project
 
-nan 
+no  
