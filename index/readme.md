@@ -1,6 +1,8 @@
 
+    
     project title 
-read me generator
+
+read me generator 
 
     table of contents 
 
@@ -10,4 +12,22 @@ read me generator
         questions
 
 
-    
+    project description 
+
+a read me generator 
+
+    project contributors 
+
+nan 
+
+    git hub user name 
+
+mjaeschke
+
+    group emails 
+
+jaeschke21@gmail
+
+    questions for the project
+
+nan 

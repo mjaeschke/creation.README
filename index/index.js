@@ -1,8 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const axios = require("axios");
 const util = require("util");
-const writeFileAsync = util.promisify(fs.writeFile);
+const fileAsync = util.promisify(fs.writeFile);
 
 function userInput(){
 return inquirer.prompt([
@@ -46,7 +45,8 @@ return inquirer.prompt([
 inqP = userInput();
 inqP.then(function(info){
     let readMe =`
-    project title ${'\n'+info.title}
+    
+    project title ${'\n'+'\n'+info.title}
 
     table of contents 
 
@@ -56,19 +56,18 @@ inqP.then(function(info){
         questions
 
 
-    project description ${'\n'+info.description}
+    project description ${'\n'+'\n'+info.description}
 
-    project contributors ${'\n'+info.contributing} 
+    project contributors ${'\n'+'\n'+info.contributing} 
 
-    project contributors ${'\n'+info.userName}
+    git hub user name ${'\n'+'\n'+info.userName}
 
-    project contributors ${'\n'+info.email}
-    
-    questions for the project${'\n'+info.questions}
+    group emails ${'\n'+'\n'+info.email}
+
+    questions for the project${'\n'+'\n'+info.questions} `;
 
 
-    `;
-    let writeP = writeFileAsync("README.md", readMe);
+    let writeP = fileAsync("README.md", readMe);
     writeP.then(()=>{
         console.log("succesfull!");
     }).catch(function(err){
