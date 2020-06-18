@@ -1,9 +1,11 @@
-console.log("hello world");
-var inquirer = require("inquirer");
-var fs = require('fs');
-const { info } = require("console");
+const inquirer = require("inquirer");
+const fs = require("fs");
+const axios = require("axios");
+const util = require("util");
+const writeFileAsync = util.promisify(fs.writeFile);
 
-inquirer.prompt([
+function userInput(){
+return inquirer.prompt([
     {
       type: "input",
       message: "What is the the title of your projct?",
@@ -14,20 +16,10 @@ inquirer.prompt([
         message: "give a description of your project",
         name: "description"
     },
-    {
-        type: "input",
-        message: "what is your table of contents",
-        name: "TOC"
-      },
       {
         type: "input",
         message: "instalation?",
         name: "instalation"
-      },
-      {
-        type: "input",
-        message: "usage?",
-        name: "usage"
       },
       {
         type: "input",
@@ -36,14 +28,38 @@ inquirer.prompt([
       },
       {
         type: "input",
-        message: "test?",
-        name: "test"
-      },
-      {
-        type: "input",
         message: "Any questions for your project?",
         name: "questions"
       },
-  ]).then(info => {
-    console.log(JSON.stringify(info,null,''));
-    });
+  ]);
+}
+inqP = userInput();
+inqP.then(function(info){
+    let readMe =`
+    project title ${'\n'+info.title}
+
+    table of contents 
+
+        instalation
+        usage
+        contributors
+        questions
+
+
+    project description ${'\n'+info.description}
+
+    project contributors ${'\n'+info.contributing}
+
+
+    `;
+    let writeP = writeFileAsync("README.md", readMe);
+    writeP.then(()=>{
+        console.log("succesfull!");
+    }).catch(function(err){
+        console.log("error");
+        console.log(err);
+    }).catch(function(err){
+        console.log("error");
+        console.log(err);
+    })
+});
