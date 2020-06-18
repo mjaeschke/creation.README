@@ -16,6 +16,16 @@ return inquirer.prompt([
         message: "give a description of your project",
         name: "description"
     },
+    {
+        type: "input",
+        message: "Enter Your Github User Name",
+        name: "userName"
+      },
+      {
+        type: "input",
+        message: "Enter Your Email",
+        name: "email"
+      },
       {
         type: "input",
         message: "instalation?",
@@ -48,7 +58,13 @@ inqP.then(function(info){
 
     project description ${'\n'+info.description}
 
-    project contributors ${'\n'+info.contributing}
+    project contributors ${'\n'+info.contributing} 
+
+    project contributors ${'\n'+info.userName}
+
+    project contributors ${'\n'+info.email}
+    
+    questions for the project${'\n'+info.questions}
 
 
     `;
