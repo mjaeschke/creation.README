@@ -40,9 +40,9 @@ const fileAsync = util.promisify(fs.writeFile);
         name: "questions"
       },
   ]).then(function(info){
-    let readMe =`
+    let readMe =
     
-    **project title** 
+    `project title 
     
     ${info.title}
 
@@ -54,7 +54,7 @@ const fileAsync = util.promisify(fs.writeFile);
         questions
 
 
-    #project description 
+    project description 
     
     ${info.description}
 
@@ -72,7 +72,7 @@ const fileAsync = util.promisify(fs.writeFile);
 
     questions for the project
 
-    ${info.questions} `;
+    ${info.questions}`;
 
 
     let writeP = fileAsync("README.md", readMe);

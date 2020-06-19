@@ -1,8 +1,6 @@
-
+project title 
     
-    **project title** 
-    
-    t
+    read me generator 
 
     table of contents 
 
@@ -12,22 +10,22 @@
         questions
 
 
-    #project description 
+    project description 
     
-    t
+    a readme generator 
 
     Project Contributors 
 
-    t 
+    michael jeff chris  
 
     Github User Name 
 
-    t
+    mjaeschke
 
     Email 
 
-    t
+    jaeschke21@.com
 
     questions for the project
 
-    t 
+    no 
