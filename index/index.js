@@ -42,7 +42,9 @@ const fileAsync = util.promisify(fs.writeFile);
   ]).then(function(info){
     let readMe =`
     
-    project title ${'\n'+'\n'+info.title}
+    **project title** 
+    
+    ${info.title}
 
     table of contents 
 
@@ -52,15 +54,25 @@ const fileAsync = util.promisify(fs.writeFile);
         questions
 
 
-    project description ${'\n'+'\n'+info.description}
+    #project description 
+    
+    ${info.description}
 
-    project contributors ${'\n'+'\n'+info.contributing} 
+    Project Contributors 
 
-    git hub user name ${'\n'+'\n'+info.userName}
+    ${info.contributing} 
 
-    group emails ${'\n'+'\n'+info.email}
+    Github User Name 
 
-    questions for the project${'\n'+'\n'+info.questions} `;
+    ${info.userName}
+
+    Email 
+
+    ${info.email}
+
+    questions for the project
+
+    ${info.questions} `;
 
 
     let writeP = fileAsync("README.md", readMe);

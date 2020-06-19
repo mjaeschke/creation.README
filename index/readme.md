@@ -1,8 +1,8 @@
 
     
-    project title 
-
-read me generator
+    **project title** 
+    
+    t
 
     table of contents 
 
@@ -12,22 +12,22 @@ read me generator
         questions
 
 
-    project description 
+    #project description 
+    
+    t
 
-a readme generator that is created with the command line
+    Project Contributors 
 
-    project contributors 
+    t 
 
-michael john jeff 
+    Github User Name 
 
-    git hub user name 
+    t
 
-mjaeschke
+    Email 
 
-    group emails 
-
-jaeschke21@gmail.com
+    t
 
     questions for the project
 
-no  
+    t 
