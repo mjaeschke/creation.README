@@ -3,8 +3,7 @@ const fs = require("fs");
 const util = require("util");
 const fileAsync = util.promisify(fs.writeFile);
 
-function userInput(){
-return inquirer.prompt([
+ inquirer.prompt([
     {
       type: "input",
       message: "What is the the title of your projct?",
@@ -40,10 +39,7 @@ return inquirer.prompt([
         message: "Any questions for your project?",
         name: "questions"
       },
-  ]);
-}
-inqP = userInput();
-inqP.then(function(info){
+  ]).then(function(info){
     let readMe =`
     
     project title ${'\n'+'\n'+info.title}

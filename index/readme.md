@@ -14,11 +14,11 @@ read me generator
 
     project description 
 
-a read me generator
+a readme generator that is created with the command line
 
     project contributors 
 
-michael jeff john 
+michael john jeff 
 
     git hub user name 
 
